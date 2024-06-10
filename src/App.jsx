@@ -3,8 +3,101 @@ import './grid.css'
 import './assets/fonts.css'
 import hero from './assets/img/hero.png'
 import load from './assets/img/load.png'
+import { gsap } from "gsap";
+import { useEffect, useRef, useState } from 'react'
+import { useGSAP } from '@gsap/react';
+
+
+
+
 
 function App() {
+
+  gsap.registerPlugin(useGSAP);
+
+  useGSAP(() => {
+    splitTextIntoSpans(".logo p")
+    splitTextIntoSpans("hero-copy h1")
+
+    gsap.to(".img-holder img", {
+      left: 0,
+      stagger: 0.1,
+      ease: "power4.out",
+      duration: 1.5,
+      delay: 4,
+    });
+    gsap.to(".img-holder img", {
+      left: "110%",
+      stagger: -0.1,
+      ease: "power4.out",
+      duration: 1.5,
+      delay: 7,
+    });
+
+  })
+
+
+  function splitTextIntoSpans(selector) {
+
+    var element = document.querySelector(selector);
+    if (element) {
+      var text = element.innerText;
+      var splitText = text
+        .split("")
+        .map((char) => `<span>${char}</span>`)
+        .join("");
+      element.innerHTML = splitText;
+    }
+
+  }
+  var counterElement = useRef(null);
+  const [currentValue, setCurrentValue] = useState(0);
+
+
+  // useEffect(() => {
+  //   startLoader();
+  //   console.log('aaaa')
+  // }, []);
+
+  var valor = 0
+
+  function startLoader() {
+
+    console.log(valor)
+
+
+    function updateCounter() {
+
+      if (valor === 100) {
+        console.log('bateu 100')
+        return;
+      }
+
+      valor += Math.floor(Math.random() * 10) + 1
+      valor = valor > 100 ? 100 : valor
+      console.log(valor)
+
+      const htmlContent = valor
+        .toString()
+        .split("")
+        .map((char) => `<span>${char}</span>`)
+        .join("") + "<span>%</span>";
+
+      if (counterElement.current) {
+        counterElement.current.innerHTML = htmlContent;
+      }
+      var delay = Math.floor(Math.random() * 200) + 100;
+      setTimeout(updateCounter, delay);
+
+
+    }
+    updateCounter()
+  }
+  startLoader();
+
+
+
+
 
   return (
     <>
@@ -37,14 +130,14 @@ function App() {
             <p>BRASIL</p>
             <div className='text_year'>
               <p>PILLS STUDY</p>
-              <p1>(20;23)</p1>
+              <p><span>(20;23)</span></p>
             </div>
 
           </div>
           <div className='left_section_bottom'>
             <p>STUDY CASE</p>
             <div className='directby'>
-              <p1>DIRECT BY ARTHUR</p1>
+              <p><span>DIRECT BY ARTHUR</span></p>
               <p>FT GABRIEL BARBOSA</p>
             </div>
           </div>
@@ -60,27 +153,27 @@ function App() {
         <h1>PILLS</h1>
       </div>
       <div className="overlay">
-      <div className="overlay-content">
-        <div className="images">
-          <div className="img-holder">
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
-            <img src={load} alt="" />
+        <div className="overlay-content">
+          <div className="images">
+            <div className="img-holder">
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+              <img src={load} alt="" />
+            </div>
+          </div>
+          <div className="text">
+            <div className="counter" ref={counterElement}><p></p></div>
+            <div className="logo"><p>pills</p></div>
           </div>
         </div>
-        <div className="text">
-          <div className="counter"><p>100%</p></div>
-          <div className="logo"><p>kudos</p></div>
-        </div>
       </div>
-    </div>
     </>
   )
 }
