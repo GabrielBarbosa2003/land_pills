@@ -18,7 +18,6 @@ function App() {
   useGSAP(() => {
     splitTextIntoSpans(".logo p")
     splitTextIntoSpans(".hero-copy h1")
-    //splitTextIntoSpans(".counter p")
 
     gsap.to(".img-holder img", {
       left: 0,
@@ -95,10 +94,6 @@ function App() {
     
     function animateText() {
       setTimeout(() => {
-        var element = document.querySelector(".logo p");
-        console.log(element)
-        var element2 = document.querySelector(".counter p");
-        console.log(element2)
         gsap.to(".counter p span", {
           top: "-400px",
           stagger: 0.1,
@@ -136,7 +131,7 @@ function App() {
         });
 
         gsap.to(".hero-copy h1 span", {
-          top: "0",
+          top: "120",
           stagger: 0.1,
           ease: "power3.inOut",
           duration: 2,
@@ -161,7 +156,8 @@ function App() {
 
   return (
     <>
-      <nav className='navbar'>
+    <section className='home'>
+    <nav className='navbar'>
         <div className='contact'>
           <a href='#'>Contact</a>
           <a href='#'>Contact</a>
@@ -206,12 +202,19 @@ function App() {
 
         <div className='right_section'>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+          <div className='right_bottom'>
+            
+            <a href='#'><button>Learn more</button></a>
+          </div>
         </div>
       </div>
 
       <div className="hero-copy">
         <h1>PILLS</h1>
       </div>
+
+    </section>
+
       <div className="overlay">
         <div className="overlay-content">
           <div className="images">
