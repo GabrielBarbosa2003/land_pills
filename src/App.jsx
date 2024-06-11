@@ -17,7 +17,8 @@ function App() {
 
   useGSAP(() => {
     splitTextIntoSpans(".logo p")
-    splitTextIntoSpans("hero-copy h1")
+    splitTextIntoSpans(".hero-copy h1")
+    //splitTextIntoSpans(".counter p")
 
     gsap.to(".img-holder img", {
       left: 0,
@@ -47,35 +48,26 @@ function App() {
         .map((char) => `<span>${char}</span>`)
         .join("");
       element.innerHTML = splitText;
+      console.log(splitText)
     }
 
   }
+
   var counterElement = useRef(null);
-  const [currentValue, setCurrentValue] = useState(0);
-
-
-  // useEffect(() => {
-  //   startLoader();
-  //   console.log('aaaa')
-  // }, []);
-
+  
   var valor = 0
 
   function startLoader() {
 
-    console.log(valor)
-
-
     function updateCounter() {
-
       if (valor === 100) {
-        console.log('bateu 100')
+        animateText()
         return;
       }
 
       valor += Math.floor(Math.random() * 10) + 1
       valor = valor > 100 ? 100 : valor
-      console.log(valor)
+
 
       const htmlContent = valor
         .toString()
@@ -85,11 +77,68 @@ function App() {
 
       if (counterElement.current) {
         counterElement.current.innerHTML = htmlContent;
+        console.log(counterElement.current.innerHTML)
+
       }
+
       var delay = Math.floor(Math.random() * 200) + 100;
       setTimeout(updateCounter, delay);
 
 
+    }
+    function animateText() {
+      setTimeout(() => {
+        gsap.to(".text .counter span", {
+          top: "-400px",
+          stagger: 0.1,
+          ease: "power3.inOut",
+          duration: 1,
+        });
+
+        gsap.to(".logo p span", {
+          top: "0",
+          stagger: 0.1,
+          ease: "power3.inOut",
+          duration: 1,
+        });
+
+        gsap.to(".logo p span", {
+          top: "-400px",
+          stagger: 0.1,
+          ease: "power3.inOut",
+          duration: 1,
+          delay: 3,
+        });
+
+        gsap.to(".overlay", {
+          opacity: 0,
+          ease: "power3.inOut",
+          duration: 1,
+          delay: 4,
+        });
+
+        gsap.to(".hero img", {
+          scale: 1,
+          ease: "power3.inOut",
+          duration: 2,
+          delay: 3.5,
+        });
+
+        gsap.to(".hero-copy h1 span", {
+          top: "0",
+          stagger: 0.1,
+          ease: "power3.inOut",
+          duration: 2,
+          delay: 4,
+        });
+
+        gsap.to(".navbar", {
+          top: "0",
+          ease: "power3.inOut",
+          duration: 2,
+          delay: 4,
+        });
+      }, 300);
     }
     updateCounter()
   }
@@ -169,7 +218,9 @@ function App() {
             </div>
           </div>
           <div className="text">
-            <div className="counter" ref={counterElement}><p></p></div>
+            <div className="counter" ref={counterElement}>
+              100%
+            </div>
             <div className="logo"><p>pills</p></div>
           </div>
         </div>
