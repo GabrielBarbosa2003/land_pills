@@ -48,7 +48,6 @@ function App() {
         .map((char) => `<span>${char}</span>`)
         .join("");
       element.innerHTML = splitText;
-      console.log(splitText)
     }
 
   }
@@ -56,39 +55,51 @@ function App() {
   var counterElement = useRef(null);
   
   var valor = 0
+  
 
   function startLoader() {
 
-    function updateCounter() {
-      if (valor === 100) {
-        animateText()
-        return;
+    useEffect(() => {
+      function updateCounter() {
+        if (valor === 100) {
+            animateText()
+          return;
+        }
+  
+        valor += Math.floor(Math.random() * 10) + 1
+        valor = valor > 100 ? 100 : valor
+  
+  
+        const htmlContent = valor
+          .toString()
+          .split("")
+          .map((char) => `<span>${char}</span>`)
+          .join("") + "<span>%</span>";
+  
+        if (counterElement.current) {
+          counterElement.current.innerHTML = htmlContent;
+          //console.log(counterElement.current.className)
+  
+        }
+        
+  
+        var delay = Math.floor(Math.random() * 200) + 100;
+        setTimeout(updateCounter, delay);
+  
+  
       }
+      updateCounter()
 
-      valor += Math.floor(Math.random() * 10) + 1
-      valor = valor > 100 ? 100 : valor
+    },[])
 
-
-      const htmlContent = valor
-        .toString()
-        .split("")
-        .map((char) => `<span>${char}</span>`)
-        .join("") + "<span>%</span>";
-
-      if (counterElement.current) {
-        counterElement.current.innerHTML = htmlContent;
-        console.log(counterElement.current.innerHTML)
-
-      }
-
-      var delay = Math.floor(Math.random() * 200) + 100;
-      setTimeout(updateCounter, delay);
-
-
-    }
+    
     function animateText() {
       setTimeout(() => {
-        gsap.to(".text .counter span", {
+        var element = document.querySelector(".logo p");
+        console.log(element)
+        var element2 = document.querySelector(".counter p");
+        console.log(element2)
+        gsap.to(".counter p span", {
           top: "-400px",
           stagger: 0.1,
           ease: "power3.inOut",
@@ -140,7 +151,7 @@ function App() {
         });
       }, 300);
     }
-    updateCounter()
+  
   }
   startLoader();
 
@@ -218,8 +229,8 @@ function App() {
             </div>
           </div>
           <div className="text">
-            <div className="counter" ref={counterElement}>
-              100%
+            <div className="counter" >
+              <p ref={counterElement}></p>
             </div>
             <div className="logo"><p>pills</p></div>
           </div>
