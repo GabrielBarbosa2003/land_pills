@@ -121,6 +121,7 @@ function App() {
           ease: "power3.inOut",
           duration: 1,
           delay: 4,
+          zIndex : -1
         });
 
         gsap.to(".hero img", {
