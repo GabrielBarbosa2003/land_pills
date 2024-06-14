@@ -52,46 +52,46 @@ function App() {
   }
 
   var counterElement = useRef(null);
-  
+
   var valor = 0
-  
+
 
   function startLoader() {
 
     useEffect(() => {
       function updateCounter() {
         if (valor === 100) {
-            animateText()
+          animateText()
           return;
         }
-  
+
         valor += Math.floor(Math.random() * 10) + 1
         valor = valor > 100 ? 100 : valor
-  
-  
+
+
         const htmlContent = valor
           .toString()
           .split("")
           .map((char) => `<span>${char}</span>`)
           .join("") + "<span>%</span>";
-  
+
         if (counterElement.current) {
           counterElement.current.innerHTML = htmlContent;
           //console.log(counterElement.current.className)
-  
+
         }
-        
-  
+
+
         var delay = Math.floor(Math.random() * 200) + 100;
         setTimeout(updateCounter, delay);
-  
-  
+
+
       }
       updateCounter()
 
-    },[])
+    }, [])
 
-    
+
     function animateText() {
       setTimeout(() => {
         gsap.to(".counter p span", {
@@ -121,7 +121,7 @@ function App() {
           ease: "power3.inOut",
           duration: 1,
           delay: 4,
-          zIndex : -1
+          zIndex: -1
         });
 
         gsap.to(".hero img", {
@@ -147,7 +147,7 @@ function App() {
         });
       }, 300);
     }
-  
+
   }
   startLoader();
 
@@ -157,64 +157,64 @@ function App() {
 
   return (
     <>
-    <section className='home'>
-    <nav className='navbar'>
-        <div className='contact'>
-          <a href='#'>Contact</a>
-          <a href='#'>Contact</a>
+      <section className='home'>
+        <nav className='navbar'>
+          <div className='contact'>
+            <a href='#'>Contact</a>
+            <a href='#'>Contact</a>
+          </div>
+
+          <div className='logo'>
+            <a href='#'>PILLS</a>
+          </div>
+
+          <div className='services'>
+            <a href='#'>Services</a>
+            <a href='#'>Contact</a>
+          </div>
+        </nav>
+
+
+
+        <div className='hero'>
+          <img src={hero} alt='imagem de pilulas' />
         </div>
 
-        <div className='logo'>
-          <a href='#'>PILLS</a>
-        </div>
+        <div className='mid_section'>
 
-        <div className='services'>
-          <a href='#'>Services</a>
-          <a href='#'>Contact</a>
-        </div>
-      </nav>
+          <div className='left_section'>
+            <div className='left_section_top'>
+              <p>BRASIL</p>
+              <div className='text_year'>
+                <p>PILLS STUDY</p>
+                <p><span>(20;23)</span></p>
+              </div>
 
-
-
-      <div className='hero'>
-        <img src={hero} alt='imagem de pilulas' />
-      </div>
-
-      <div className='mid_section'>
-
-        <div className='left_section'>
-          <div className='left_section_top'>
-            <p>BRASIL</p>
-            <div className='text_year'>
-              <p>PILLS STUDY</p>
-              <p><span>(20;23)</span></p>
+            </div>
+            <div className='left_section_bottom'>
+              <p>STUDY CASE</p>
+              <div className='directby'>
+                <p><span>DIRECT BY ARTHUR</span></p>
+                <p>FT GABRIEL BARBOSA</p>
+              </div>
             </div>
 
           </div>
-          <div className='left_section_bottom'>
-            <p>STUDY CASE</p>
-            <div className='directby'>
-              <p><span>DIRECT BY ARTHUR</span></p>
-              <p>FT GABRIEL BARBOSA</p>
+
+          <div className='right_section'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+            <div className='right_bottom'>
+
+              <a href='#'><button>Learn more</button></a>
             </div>
           </div>
-
         </div>
 
-        <div className='right_section'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-          <div className='right_bottom'>
-            
-            <a href='#'><button>Learn more</button></a>
-          </div>
+        <div className="hero-copy">
+          <h1>PILLS</h1>
         </div>
-      </div>
 
-      <div className="hero-copy">
-        <h1>PILLS</h1>
-      </div>
-
-    </section>
+      </section>
 
       <div className="overlay">
         <div className="overlay-content">
