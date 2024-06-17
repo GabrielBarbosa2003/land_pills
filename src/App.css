@@ -147,7 +147,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: var(--color-accent);
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,12 +186,9 @@
     position: relative;
     margin: 1em 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    color: white;
+    color: black;
 }
 
-.counter p {
-    color: red;
-}
 
 
 .counter,
@@ -199,6 +196,7 @@
     font-size: 200px;
     text-align: center;
     text-transform: uppercase;
+    color: black;
 }
 
 .counter p {
@@ -209,7 +207,7 @@
 .logo p span {
     position: relative;
     z-index: -2;
-    color: white;
+    color: black;
 }
 
 
