@@ -175,7 +175,6 @@ function App() {
         </nav>
 
 
-
         <div className='hero'>
           <img src={hero} alt='imagem de pilulas' />
         </div>
@@ -209,10 +208,10 @@ function App() {
             </div>
           </div>
         </div>
-
         <div className="hero-copy">
           <h1>PILLS</h1>
         </div>
+
 
       </section>
 
