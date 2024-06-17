@@ -175,12 +175,13 @@
 
 .img-holder {
     position: relative;
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin: 0 auto;
     z-index: 2;
     border: 2px purple solid;
     clip-path: inset(0 0 0 0);
+    
 }
 
 .img-holder img {
@@ -188,6 +189,7 @@
     top: 0;
     height: 550px;
     left: -110%;
+    padding-left: 50px;
 }
 
 .text {
@@ -265,6 +267,12 @@
         margin-bottom: 0px;
         height: 600px;
     }
+    .img-holder {
+        width: 100%;
+      
+        
+    }
+    
 
 }
 
@@ -280,6 +288,7 @@
 
     .img-holder img {
         left: -270%;
+        padding-left: 10px;
     }
 
     .counter,
