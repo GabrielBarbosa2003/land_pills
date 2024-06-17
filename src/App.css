@@ -283,11 +283,12 @@
     }
 
     .overlay-content {
-        width: 60%;
+        width: 80%;
     }
 
     .img-holder img {
-        left: -270%;
+        width: 100%;
+        left: -110%;
         padding-left: 10px;
     }
 
