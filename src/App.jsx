@@ -6,6 +6,7 @@ import load from './assets/img/load.png'
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react';
+import  Menu from './components/Menu/index.jsx'
 
 
 
@@ -149,37 +150,43 @@ function App() {
     }
 
   }
-  //startLoader();
+  startLoader();
 
 
 
 
-
+let tela = window.innerWidth;
   return (
     <>
       <section className='home'>
+        { tela <= 480 ? 
+        <Menu/>
+        :
         <nav className='navbar'>
-          <div className='contact'>
-            <a href='#'>Contact</a>
-            <a href='#'>Contact</a>
-          </div>
+        <div className='contact'>
+          <a href='#'>Contact</a>
+          <a href='#'>Contact</a>
+        </div>
 
-          <div className='logo'>
-            <a href='#'>PILLS</a>
-          </div>
+        <div className='logo'>
+          <a href='#'>PILLS</a>
+        </div>
 
-          <div className='services'>
-            <a href='#'>Services</a>
-            <a href='#'>Contact</a>
-          </div>
-        </nav>
+        <div className='services'>
+          <a href='#'>Services</a>
+          <a href='#'>Contact</a>
+        </div>
+      </nav>
+        
+      }
+       
 
 
         <div className='hero'>
           <img src={hero} alt='imagem de pilulas' />
         </div>
 
-        <div className='mid_section'>
+        {/* <div className='mid_section'>
 
           <div className='left_section'>
             <div className='left_section_top'>
@@ -207,7 +214,7 @@ function App() {
               <a href='#'><button>Learn more</button></a>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="hero-copy">
           <h1>PILLS</h1>
         </div>

@@ -3,10 +3,11 @@
 :root {
     --color-accent: black;
 }
-.home{
+
+.home {
     width: 100%;
     height: 100%;
-    
+
 }
 
 
@@ -115,23 +116,26 @@
     align-items: center;
     width: 356px;
     height: auto;
-   
+
     position: relative;
 }
-.right_section p{
+
+.right_section p {
     overflow-wrap: break-word;
     line-height: 28px;
     font-size: 14;
     color: #F7F7F7;
     opacity: 80%;
 }
-.right_bottom{
+
+.right_bottom {
     display: flex;
     justify-content: start;
     width: 356px;
     padding-top: 32px;
 }
-.right_section button{
+
+.right_section button {
     width: 156px;
     height: 40px;
     border-radius: 32px;
@@ -256,24 +260,35 @@
 }
 
 @media (max-width:1440px) {
-    .hero-copy h1{
+    .hero-copy h1 {
         font-size: 36vw;
         margin-bottom: 0px;
         height: 600px;
     }
-    
+
 }
+
 @media (max-width:480px) {
-    .overlay{
+    .overlay {
         width: 100%;
         height: 100%;
     }
+
     .overlay-content {
         width: 60%;
     }
+
     .img-holder img {
-        left: -200%;
+        left: -270%;
     }
-    
-    
+
+    .counter,
+    .logo p {
+        font-size: 100px;
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+    }
+
+
 }
