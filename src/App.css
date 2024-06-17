@@ -152,10 +152,12 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
+    border: 2px red solid;
 }
 
 .overlay-content {
     width: 40%;
+    border: 2px blue solid;
 }
 
 .images {
@@ -164,6 +166,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px green solid;
 }
 
 .img-holder {
@@ -172,7 +175,8 @@
     height: 100%;
     margin: 0 auto;
     z-index: 2;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    border: 2px purple solid;
+    clip-path: inset(0 0 0 0);
 }
 
 .img-holder img {
@@ -260,5 +264,16 @@
     
 }
 @media (max-width:480px) {
+    .overlay{
+        width: 100%;
+        height: 100%;
+    }
+    .overlay-content {
+        width: 60%;
+    }
+    .img-holder img {
+        left: -200%;
+    }
+    
     
 }

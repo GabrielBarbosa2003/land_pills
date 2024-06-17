@@ -149,7 +149,7 @@ function App() {
     }
 
   }
-  startLoader();
+  //startLoader();
 
 
 
