@@ -25,14 +25,14 @@ function App() {
       stagger: 0.1,
       ease: "power4.out",
       duration: 1.5,
-      delay: 4,
+      delay: 3,
     });
     gsap.to(".img-holder img", {
       left: "110%",
       stagger: -0.1,
       ease: "power4.out",
       duration: 1.5,
-      delay: 7,
+      delay: 6,
     });
 
   })
@@ -146,7 +146,7 @@ function App() {
           duration: 2,
           delay: 4,
         });
-      }, 300);
+      }, 100);
     }
 
   }
