@@ -190,7 +190,7 @@ let tela = window.innerWidth;
           <img src={hero} alt='imagem de pilulas' />
         </div>
 
-        {/* <div className='mid_section'>
+        <div className='mid_section'>
 
           <div className='left_section'>
             <div className='left_section_top'>
@@ -218,7 +218,7 @@ let tela = window.innerWidth;
               <a href='#'><button>Learn more</button></a>
             </div>
           </div>
-        </div> */}
+        </div> 
         <div className="hero-copy">
           <h1>PILLS</h1>
         </div>

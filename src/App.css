@@ -132,7 +132,7 @@
     display: flex;
     justify-content: start;
     width: 356px;
-    padding-top: 32px;
+    padding-top: 24px;
 }
 
 .right_section button {
@@ -142,6 +142,7 @@
     background-color: white;
     color: black;
     font-size: large;
+    position: relative;
 }
 
 
@@ -156,12 +157,10 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-    border: 2px red solid;
 }
 
 .overlay-content {
     width: 40%;
-    border: 2px blue solid;
 }
 
 .images {
@@ -170,7 +169,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px green solid;
 }
 
 .img-holder {
@@ -179,7 +177,6 @@
     height: 100%;
     margin: 0 auto;
     z-index: 2;
-    border: 2px purple solid;
     clip-path: inset(0 0 0 0);
     
 }
@@ -302,6 +299,9 @@
     .menuu{
         position: relative;
         z-index: 10;
+    }
+    .mid_section{
+        display: none;
     }
 
 
