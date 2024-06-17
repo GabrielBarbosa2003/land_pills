@@ -5,7 +5,6 @@
   left: 0;
   bottom: 0;
   width: 400px;
-  background: red;
   padding-top: 100px;
   transform: translateX(-100%);
   will-change: transform;
@@ -19,11 +18,11 @@ ul {
 }
 
 li {
-  color: red;
+  color: white;
   display: block;
   transform-origin: -20px 50%;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 30px;
   padding: 10px;
   will-change: transform, opacity, filter;
 }
@@ -47,7 +46,7 @@ button {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: blue;
+  background: transparent;
   padding: 10px;
 }
 

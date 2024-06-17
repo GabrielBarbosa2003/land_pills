@@ -160,7 +160,11 @@ let tela = window.innerWidth;
     <>
       <section className='home'>
         { tela <= 480 ? 
-        <Menu/>
+        <div className='menuu'>
+          <Menu/>
+
+        </div>
+        
         :
         <nav className='navbar'>
         <div className='contact'>
