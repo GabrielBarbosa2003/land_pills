@@ -180,8 +180,7 @@ let tela = window.innerWidth;
           <a href='#'>Services</a>
           <a href='#'>Contact</a>
         </div>
-      </nav>
-        
+      </nav>  
       }
        
 

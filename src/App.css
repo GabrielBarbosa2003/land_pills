@@ -6,6 +6,7 @@
 
 .home {
     width: 100%;
+    max-width: 120rem;
     height: 100%;
     overflow: hidden;
 
@@ -17,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 120rem;
     height: 3rem;
     align-items: center;
     padding: 0px 0.9375rem;
@@ -30,12 +32,14 @@
 .hero {
     position: relative;
     width: 100%;
+    max-width: 120rem;
     height: calc(100vh - 3rem);
     overflow: hidden;
 }
 
 .hero img {
     width: 100%;
+    max-width: 120rem;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
@@ -61,6 +65,7 @@
     color: white;
     background-color: transparent;
     width: 100%;
+    max-width: 120rem;
     z-index: 1;
     top: 14rem;
     display: flex;
@@ -70,7 +75,8 @@
 }
 
 .left_section {
-    width: 17.1875rem;
+    width: 100%;
+    max-width: 17.1875rem;
 }
 
 .left_section_top {
@@ -116,9 +122,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 356px;
+    width: 100%;
+    max-width: 22.25rem;
     height: auto;
-
     position: relative;
 }
 
@@ -133,7 +139,8 @@
 .right_bottom {
     display: flex;
     justify-content: start;
-    width: 356px;
+    width: 100%;
+    max-width: 22.25rem;
     padding-top: 24px;
 }
 
@@ -152,7 +159,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
+    max-width: 120rem;
     height: 100vh;
     background: white;
     display: flex;
@@ -162,7 +170,8 @@
 }
 
 .overlay-content {
-    width: 40%;
+    width: 100%;
+    max-width: 48rem;
 }
 
 .images {
@@ -246,6 +255,7 @@
     text-transform: uppercase;
     clip-path: inset(0 0 0 0);
     overflow: hidden;
+    max-height: 600px;
 }
 
 .hero-copy h1 {
