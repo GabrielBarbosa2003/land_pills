@@ -72,6 +72,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 1.5rem;
+ 
 
 }
 
@@ -125,14 +126,15 @@
     align-items: center;
     width: 100%;
     max-width: 22.25rem;
-    height: auto;
+    height: 10.5rem;
     position: relative;
 }
 
 .right_section p {
     overflow-wrap: break-word;
+    font-weight: 400;
     line-height: 28px;
-    font-size: 14;
+    font-size: 24px;
     color: #F7F7F7;
     opacity: 80%;
 }
@@ -142,7 +144,8 @@
     justify-content: start;
     width: 100%;
     max-width: 22.25rem;
-    padding-top: 24px;
+    margin-top: 24px;
+    position: relative;
 }
 
 .right_section button {
@@ -152,7 +155,21 @@
     background-color: white;
     color: black;
     font-size: large;
-    position: relative;
+    position: absolute;
+    left: 0px;
+}
+.line{
+    border: 0.5px #F7F7F7 solid;
+    opacity: 0.2;
+    top: 23.125rem;
+    width: 100%;
+    max-width: 120rem;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    height: 10px;
 }
 
 

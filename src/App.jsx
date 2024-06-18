@@ -213,11 +213,12 @@ function App() {
           <div className='right_section'>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
             <div className='right_bottom'>
-
               <a href='#'><button>Learn more</button></a>
             </div>
           </div>
         </div>
+        {/* <div className='line'></div> */}
+        
         <div className="hero-copy">
           <h1>PILLS</h1>
         </div>
