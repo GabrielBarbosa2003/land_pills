@@ -9,6 +9,7 @@
     max-width: 120rem;
     height: 100%;
     overflow: hidden;
+    position: relative;
 
 }
 
@@ -272,6 +273,9 @@
 }
 
 @media (max-width:1440px) {
+    .hero-copy{
+        top: 80%;
+    }
     .hero-copy h1 {
         font-size: 36vw;
         margin-bottom: 0px;
