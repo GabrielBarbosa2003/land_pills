@@ -43,7 +43,7 @@
     max-width: 120rem;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 70%;
+    object-position: 50% 50%;
     transform: scale(2);
     overflow: hidden;
 
@@ -171,7 +171,7 @@
 .line{
     border: 0.5px #F7F7F7 solid;
     opacity: 0.2;
-    top: 23rem;
+    top: 24rem;
     width: 100%;
     position: absolute;
     z-index: 2;
@@ -298,6 +298,9 @@
 @media (max-width:1440px) {
     .hero-copy{
         top: 80%;
+    }
+    .hero img{
+        object-position: 50% 70%;
     }
     .hero-copy h1 {
         font-size: 36vw;
