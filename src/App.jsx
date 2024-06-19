@@ -217,7 +217,11 @@ function App() {
             </div>
           </div>
         </div>
-        {/* <div className='line'></div> */}
+        <div className='sla'>
+        <div className='line'></div>
+
+        </div>
+        
         
         <div className="hero-copy">
           <h1>PILLS</h1>
