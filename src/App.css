@@ -277,13 +277,14 @@
 
 .hero-copy {
     position: absolute;
-    top: 70%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -60%);
     text-transform: uppercase;
     clip-path: inset(0 0 0 0);
     overflow: hidden;
     max-height: 600px;
+    mix-blend-mode: difference;
 }
 
 .hero-copy h1 {
