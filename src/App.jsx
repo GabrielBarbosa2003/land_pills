@@ -244,6 +244,7 @@ function App() {
               <img src={load} alt="" />
               <img src={load} alt="" />
               <img src={load} alt="" />
+             
             </div>
           </div>
           <div className="text">

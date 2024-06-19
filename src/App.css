@@ -195,7 +195,7 @@
 
 .overlay-content {
     width: 100%;
-    max-width: 48rem;
+    max-width: 850px;
 }
 
 .images {
@@ -207,8 +207,11 @@
 }
 
 .img-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 90%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     z-index: 2;
@@ -217,11 +220,12 @@
 }
 
 .img-holder img {
+  
     position: absolute;
+    width: 100%;
     top: 0;
     height: 550px;
     left: -110%;
-    padding-left: 50px;
 }
 
 .text {
