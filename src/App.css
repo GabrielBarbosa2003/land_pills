@@ -220,7 +220,6 @@
 }
 
 .img-holder img {
-  
     position: absolute;
     width: 100%;
     top: 0;
@@ -313,7 +312,7 @@
         height: 600px;
     }
     .img-holder {
-        width: 100%;
+        width: 80%;
       
         
     }
